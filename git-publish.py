@@ -11,4 +11,4 @@ parser.add_argument('--remote', action='store', default='origin', help='the remo
 
 args = parser.parse_args()
 
-subprocess.run('git push --set-upstream'.split() + [args.branch_name, args.remote])
+subprocess.run('git push --set-upstream'.split() + [args.remote, args.branch_name])
