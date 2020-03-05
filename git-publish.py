@@ -6,3 +6,4 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument('branch-name', action='store', help='the branch to be published')
+parser.add_argument('--remote', action='store', default='origin', help='the remote the branch will be published to')
