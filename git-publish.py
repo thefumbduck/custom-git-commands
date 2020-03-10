@@ -1,6 +1,9 @@
 import argparse
 import subprocess
 
+def get_current_branch_name():
+    return subprocess.check_output('git branch --show-current'.split()).decode(encoding='utf-8').strip()
+
 parser = argparse.ArgumentParser(
         prog='git-publish',
         description="Publish a branch remotely. Equivalent of 'git push --set-upstream origin {branch-name}'."
